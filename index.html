@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="./assets/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/output.css">
+
+    <title>Ploof | Asuna Semoulin</title>
+</head>
+
+<body>
+    <header>
+        <div class="md:flex md:justify-between p-2">
+            <div class="flex justify-between p-2">
+                <img class="w-8 h-8" src="./assets/img/icon.png" alt="Ploof Logo">
+                <span class="md:hidden cursor-pointer" id="menu-open">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </span>
+                <span class="hidden md:hidden cursor-pointer" id="menu-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </span>
+            </div>
+            <nav>
+                <ul class="hidden md:flex">
+                    <li class="p-2 text-secondary"><a href="#home">Home</a></li>
+                    <li class="p-2"><a href="#about">About</a></li>
+                    <li class="p-2"><a href="#contact">Contact</a></li>
+                    <li class="p-2"><a href="#pricing">Pricing</a></li>
+                </ul>
+            </nav>
+        </div>
+        <nav class="bg-primary text-center mb-2 text-white hidden md:hidden" id="menu-nav">
+            <ul>
+                <li class="p-2 hover:bg-gray-400 cursor-pointer" onclick="window.location='#home'"><a href="#home">Home</a></li>
+                <li class="p-2 hover:bg-gray-400 cursor-pointer" onclick="window.location='#about'"><a href="#about">About</a></li>
+                <li class="p-2 hover:bg-gray-400 cursor-pointer" onclick="window.location='#contact'"><a href="#contact">Contact</a></li>
+                <li class="p-2 hover:bg-gray-400 cursor-pointer" onclick="window.location='#pricing'"><a href="#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="flex flex-col md:flex-row-reverse items-center justify-evenly h-[calc(100svh-3rem)]" id="home">
+            <div class="md:mr-2">
+                <img class="w-60 md:w-[40rem]" src="./assets/img/home_icon.png" alt="A teddy bear">
+            </div>
+            <div class="md:flex flex-col md:ml-2 max-w-[calc(100%-2rem)]">
+                <div class="my-4 max-w-full">
+                    <h1 class="text-primary text-2xl text-center md:text-left md:text-6xl">Welcome!</h1>
+                    <p class="w-80 max-w-full md:text-xl">This is the official website of our plushies shop also called Ploof.</p>
+                </div>
+                <div class="w-80 max-w-[calc(100%-2rem)]">
+                    <button
+                        id="home-learn-more-btn"
+                        class="text-white text-xs w-24 max-w-full from-primary bg-gradient-to-r to-secondary p-2 rounded-lg hover:rounded-xl opacity-100 hover:opacity-50">Learn
+                        More</button>
+                </div>
+            </div>
+            <dialog class="p-4 rounded-lg" id="home-modal">
+                <div id="home-modal-content">
+                    <div class="flex justify-between mb-2">
+                        <h2 class="text-primary">Welcome!</h2>
+                        <span class="cursor-pointer" id="home-modal-close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div>
+                        <p>We're currently making our plushies in Belgium, they are made of:</p>
+                        <ul class="list-disc ml-4">
+                            <li>100% cotton</li>
+                        </ul>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+
+        <section class="flex flex-col md:flex-row items-center justify-evenly mb-40 md:h-[100svh] md:m-0" id="about">
+            <div class="md:ml-2">
+                <img class="w-60 md:w-[40rem]" src="./assets/img/about_icon.png" alt="A teddy bear hugging a heart">
+            </div>
+            <div class="my-4 max-w-[calc(100%-2rem)] md:mr-2 md:flex flex-col">
+                <h1 class="text-primary text-2xl text-center md:text-left md:text-6xl">About</h1>
+                <p class="w-80 max-w-full md:text-xl">We are a plushies shop located in Belgium. We respect our workers and treat them
+                    equally.</p>
+            </div>
+        </section>
+
+        <section class="flex flex-col justify-center items-center md:justify-evenly mb-40 md:h-[100svh] md:m-0" id="contact">
+            <div>
+                <img class="w-40 md:w-80" src="./assets/img/contact_icon.png" alt="A phone">
+            </div>
+            <div class="max-w-[calc(100%-2rem)]">
+                <h1 class="text-primary text-2xl text-center md:text-6xl md:mb-2">Contact</h1>
+                <ul class="max-w-full md:text-xl">
+                    <li>Email: contact@ploof.com</li>
+                    <li>Phone: +32 000 00 00</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="flex flex-col justify-center items-center md:h-[100svh]" id="pricing">
+            <section class="mb-2">
+                <img class="w-60 mb-2" src="./assets/img/pricing_icon.png" alt="Coins">
+                <h1 class="text-primary text-2xl md:text-6xl text-center md:mb-8">Pricing</h1>
+            </section>
+            <div class="grid grid-rows-3 grid-cols-1 md:grid-rows-1 md:grid-cols-3 w-80 md:w-[70%] max-w-[calc(100%-2rem)]">
+                <section class="border-solid border-4 border-primary rounded-lg shadow-xl p-4 flex flex-col items-center justify-center md:justify-end mb-2 md:mx-1 h-[30rem]">
+                    <div>
+                        <img class="w-60" src="./assets/img/plush1.png" alt="A plush of a penguin">
+                    </div>
+                    <div class="m-2 text-center">
+                        <h2 class="text-primary text-xl">Penguin</h2>
+                        <p>50€</p>
+                    </div>
+                    <div>
+                        <button id="plush-penguin-learn-more-btn" class="m-2 text-white text-xs w-24 max-w-full from-primary bg-gradient-to-r to-secondary p-2 rounded-lg hover:rounded-xl opacity-100 hover:opacity-50">Learn More</button>
+                    </div>
+                    <dialog class="p-4 rounded-lg" id="plush-penguin-modal">
+                        <div id="plush-penguin-modal-content">
+                            <div class="flex justify-between mb-2">
+                                <h2 class="text-primary">Penguin</h2>
+                                <span class="cursor-pointer" id="plush-penguin-modal-close-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <p>Price: 50€</p>
+                                <p>Made of:</p>
+                                <ul class="list-disc ml-4">
+                                    <li>100% cotton</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dialog>
+                </section>
+                <section class="border-solid border-4 border-primary rounded-lg shadow-xl p-4 flex flex-col items-center justify-center md:justify-end mb-2 md:mx-1 h-[30rem]">
+                    <div>
+                        <img class="w-60" src="./assets/img/plush2.png" alt="A plush of a bear">
+                    </div>
+                    <div class="m-2 text-center">
+                        <h2 class="text-primary text-xl">Bear</h2>
+                        <p>50€</p>
+                    </div>
+                    <div>
+                        <button id="plush-bear-learn-more-btn" class="m-2 text-white text-xs w-24 max-w-full from-primary bg-gradient-to-r to-secondary p-2 rounded-lg hover:rounded-xl opacity-100 hover:opacity-50">Learn More</button>
+                    </div>
+                    <dialog class="p-4 rounded-lg" id="plush-bear-modal">
+                        <div id="plush-bear-modal-content">
+                            <div class="flex justify-between mb-2">
+                                <h2 class="text-primary">Bear</h2>
+                                <span class="cursor-pointer" id="plush-bear-modal-close-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <p>Price: 50€</p>
+                                <p>Made of:</p>
+                                <ul class="list-disc ml-4">
+                                    <li>100% cotton</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dialog>
+                </section>
+                <section class="border-solid border-4 border-primary rounded-lg shadow-xl p-4 flex flex-col items-center justify-center md:justify-end md:mx-1 h-[30rem]">
+                    <div>
+                        <img class="w-60" src="./assets/img/plush3.png" alt="A plush of a cow">
+                    </div>
+                    <div class="m-2 text-center">
+                        <h2 class="text-primary text-xl">Cow</h2>
+                        <p>50€</p>
+                    </div>
+                    <div>
+                        <button id="plush-cow-learn-more-btn" class="m-2 text-white text-xs w-24 max-w-full from-primary bg-gradient-to-r to-secondary p-2 rounded-lg hover:rounded-xl opacity-100 hover:opacity-50">Learn More</button>
+                    </div>
+                    <dialog class="p-4 rounded-lg" id="plush-cow-modal">
+                        <div id="plush-cow-modal-content">
+                            <div class="flex justify-between mb-2">
+                                <h2 class="text-primary">Cow</h2>
+                                <span class="cursor-pointer" id="plush-cow-modal-close-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <p>Price: 50€</p>
+                                <p>Made of:</p>
+                                <ul class="list-disc ml-4">
+                                    <li>100% cotton</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </dialog>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-white bg-gray-900 text-center p-2 md:flex md:justify-evenly">
+        <section class="mb-2">
+            <h1 class="text-gray-400">USEFUL LINKS</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+        </section>
+        <section class="flex flex-col mb-2">
+            <h1 class="text-gray-400 mb-1">NEWSLETTER</h1>
+            <form class="flex flex-col items-center">
+                <input class="mb-2 rounded-lg text-center p-2 text-black max-w-full w-full" type="text" name="email" id="email" placeholder="Your Email Address">
+                <button class="border-solid border-4 rounded-lg p-2 max-w-full w-full" type="submit">Subscribe Now</button>
+            </form>
+        </section>
+        <section>
+            <h1 class="text-gray-400">CONTACT</h1>
+            <ul>
+                <li>Email: contact@ploof.com</li>
+                <li>Phone: +32 000 00 00</li>
+            </ul>
+        </section>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
